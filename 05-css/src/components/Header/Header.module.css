@@ -1,0 +1,26 @@
+.head{
+    background-color: lightgoldenrodyellow;
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.head button{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    background-color: aquamarine;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.head button:hover{
+    scale: 0.95;
+}
