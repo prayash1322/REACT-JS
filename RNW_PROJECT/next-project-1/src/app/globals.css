@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+.page {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page h1 {
+  color: #46e58b;
+  margin-bottom: 10px;
+}
+
+.page p {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.nav-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #e58846;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.student-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.student-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.student-card h3 {
+  margin-top: 0;
+  color: #4f46e5;
+}
+
+.student-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #444;
+}
