@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <div className={`flex justify-between items-center ${isDark ? 'bg-[#0B0909]' : 'bg-white shadow-md'} py-5 px-8 text-2xl`}>
-      <Link to='/' className="font-bold text-2xl">Media Search</Link>
+      <Link to='/' className="font-bold text-2xl">Glimpse</Link>
 
       <div className="flex gap-4 items-center">
         <button

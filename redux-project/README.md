@@ -1,16 +1,118 @@
-# React + Vite
+# 🌟 Glimpse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern media search app built with React & Redux that lets you search and save photos, videos, and GIFs all in one place.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🔍 **Search** — Search for any media across multiple sources at once
+- 🗂️ **All Tab** — View photos, videos, and GIFs mixed together in one grid
+- 📸 **Photos** — Powered by Unsplash API
+- 🎥 **Videos** — Powered by Pexels API
+- 🎞️ **GIFs** — Powered by Giphy API
+- 💾 **Collections** — Save your favorite media and revisit them anytime
+- 🗑️ **Clear Collection** — Remove all saved items at once
+- 🌙 **Dark / Light Mode** — Toggle between dark and light theme
+- 💀 **Skeleton Loading** — Smooth skeleton placeholders while content loads
+- 🔔 **Toast Notifications** — Feedback on save, remove, and clear actions
+- 🦥 **Lazy Loading** — Images load only when visible for better performance
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology | Purpose |
+|---|---|
+| ⚛️ React 19 | UI Library |
+| 🗃️ Redux Toolkit | State Management |
+| 🛣️ React Router DOM | Client-side Routing |
+| 🎨 Tailwind CSS v4 | Styling |
+| 📡 Axios | API Requests |
+| 🔔 React Toastify | Toast Notifications |
+| 💀 React Loading Skeleton | Skeleton UI |
+| 🖼️ Lucide React | Icons |
+| ⚡ Vite | Build Tool |
+
+---
+
+## 🌐 APIs Used
+
+- [Unsplash API](https://unsplash.com/developers) — Photos
+- [Pexels API](https://www.pexels.com/api/) — Videos
+- [Giphy API](https://developers.giphy.com/) — GIFs
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/media-search.git
+cd media-search
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Setup environment variables
+
+Create a `.env` file in the root of the project and add your API keys:
+
+```env
+VITE_UNSPLASH_KEY=your_unsplash_api_key
+VITE_PEXELS_KEY=your_pexels_api_key
+VITE_GIPHY_KEY=your_giphy_api_key
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── api/
+│   └── mediaApi.js         # API calls for Unsplash, Pexels, Giphy
+├── components/
+│   ├── Navbar.jsx           # Navbar with theme toggle & collection badge
+│   ├── SearchBar.jsx        # Search input form
+│   ├── Tabs.jsx             # All / Photos / Videos / GIF tabs
+│   ├── ResultGrid.jsx       # Grid of results with skeleton loading
+│   ├── ResultCard.jsx       # Individual media card
+│   ├── CollectionCard.jsx   # Saved media card with remove button
+│   └── SkeletonCard.jsx     # Skeleton placeholder card
+├── pages/
+│   ├── HomePage.jsx         # Search page
+│   └── CollectionPage.jsx   # Saved collection page
+├── redux/
+│   ├── store.js             # Redux store
+│   └── features/
+│       ├── searchSlice.js   # Search state (query, results, tabs, loading)
+│       ├── collectionSlice.js # Collection state with localStorage
+│       └── themeSlice.js    # Dark/Light theme state
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## 📸 Screenshots
+
+> Coming soon...
+
+---
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
