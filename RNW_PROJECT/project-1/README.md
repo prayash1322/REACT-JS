@@ -1,16 +1,92 @@
-# React + Vite
+# Project-1 — React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React learning project built during the **Full Stack Development** course at **Red & White Skill Education**. It covers core React concepts including components, props, state management with `useState`, side effects with `useEffect`, and local storage integration.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- React 19
+- Vite 8
+- JavaScript (JSX)
+- CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Welcome section with student info and profile image
+- Rest & Spread operator demo
+- Student card list rendered with props
+- `useState` examples — String, Number, Boolean, Array, Object
+- Student Manager with `useEffect` + Local Storage persistence
+
+---
+
+## Project Structure
+
+```
+project-1/
+├── public/
+├── src/
+│   ├── assets/
+│   │   └── me.JPG
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   ├── WelcomeSection.jsx
+│   │   ├── RestSpreadDemo.jsx
+│   │   ├── StudentCard.jsx
+│   │   ├── StudentCardList.jsx
+│   │   ├── StateString.jsx
+│   │   ├── StateNumber.jsx
+│   │   ├── StateBoolean.jsx
+│   │   ├── StateArray.jsx
+│   │   ├── StateObject.jsx
+│   │   └── StudentManager.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+App runs at `http://localhost:5173`
+
+---
+
+## Screenshots
+
+> Add screenshots of your app here.
+
+| Home Page | useState Demo |
+|-----------|---------------|
+| ![Home](./src/screenshots/home.png) | ![State](./src/screenshots/hooks-1.png) | ![State](./src/screenshots/hooks-2.png) | ![State](./src/screenshots/props.png) 
+
+---
+
+## Video Explanation
+
+> Add a link to your video walkthrough here.
+
+[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://drive.google.com/file/d/1J4bmZVBlQBDMzU4LReXabVqNbKxhDDv1/view?usp=sharing)
+
+---
+
+## Author
+
+**Prayash**
+Course: Full Stack Development
+Institute: Red & White Skill Education

@@ -1,40 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Next-Project-1 — Next.js App Router
+
+A Next.js learning project built during the **Full Stack Development** course at **Red & White Skill Education**. It demonstrates the Next.js App Router, file-based routing, server components, reusable components with props, and navigation using the `Link` component.
+
+---
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- Tailwind CSS 4
+- JavaScript (JSX)
+
+---
+
+## Features
+
+- Home page with a list of student cards rendered from data
+- About page with navigation back to home
+- Reusable `StudentCard` component using props
+- Client-side navigation with `next/link`
+- App Router with file-based routing (`/` and `/about`)
+
+---
+
+## Project Structure
+
+```
+next-project-1/
+├── public/
+├── src/
+│   └── app/
+│       ├── about/
+│       │   └── page.js
+│       ├── components/
+│       │   └── StudentCard.js
+│       ├── globals.css
+│       ├── layout.js
+│       └── page.js
+├── next.config.mjs
+├── package.json
+└── postcss.config.mjs
+```
+
+---
+
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Home page — displays student card list |
+| `/about` | About page — project description |
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+App runs at `http://localhost:3000`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Screenshots
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+> Add screenshots of your app here.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Home Page | About Page |
+|-----------|------------|
+| ![Home](./src/screenshot/home.png) | ![About](./src/screenshot/about.png) |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Video Explanation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+> Add a link to your video walkthrough here.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://drive.google.com/file/d/1J4bmZVBlQBDMzU4LReXabVqNbKxhDDv1/view?usp=sharing)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+**Prayash**
+Course: Full Stack Development
+Institute: Red & White Skill Education
