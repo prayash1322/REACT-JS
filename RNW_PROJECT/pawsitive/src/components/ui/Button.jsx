@@ -1,19 +1,11 @@
 function Button({ children, href = '#contact', variant = 'primary', onClick }) {
-  const className = `button button--${variant}`
+  const cls = variant === 'text' ? 'btn btn-text' : variant === 'outline' ? 'btn btn-outline' : 'btn'
 
   if (onClick) {
-    return (
-      <button className={className} type="button" onClick={onClick}>
-        {children}
-      </button>
-    )
+    return <button className={cls} type="button" onClick={onClick}>{children}</button>
   }
 
-  return (
-    <a className={className} href={href}>
-      {children}
-    </a>
-  )
+  return <a className={cls} href={href}>{children}</a>
 }
 
 export default Button

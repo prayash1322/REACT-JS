@@ -1,7 +1,22 @@
+import { UtensilsCrossed, Gamepad2, Moon } from 'lucide-react'
 import BoardingSection from './BoardingSection'
+import catImage from '../../assets/images/hero_image_04.png'
 
 function CatBoarding() {
-  return <BoardingSection tone="cat" title="Cat Boarding" image="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=900&q=85" imageAlt="Grey cat sitting calmly" text="Our quiet cat suites are designed for gentle naps, curious play, and plenty of one-to-one affection." activities={[{ icon: '◉', name: 'Eat' }, { icon: '◯', name: 'Play' }, { icon: '☾', name: 'Sleep' }]} />
+  return (
+    <BoardingSection
+      tone="cat"
+      title="Cat Boarding"
+      image={catImage}
+      imageAlt="Cat boarding"
+      text="We offer long term and short term boarding. Every cat family has their own private, spacious room and daily individual time in our open play room for the fussiest feline."
+      activities={[
+        { icon: <UtensilsCrossed size={25} />, name: 'Eat' },
+        { icon: <Gamepad2 size={25} />, name: 'Play' },
+        { icon: <Moon size={25} />, name: 'Sleep' },
+      ]}
+    />
+  )
 }
 
 export default CatBoarding

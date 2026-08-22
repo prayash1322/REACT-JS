@@ -1,17 +1,17 @@
-import Button from '../ui/Button'
+import bookingButton from '../../assets/images/text_03.png'
+import heroImage from '../../assets/images/hero_home_02.jpg'
+import waveImage from '../../assets/images/white_bottom_wave_01.png'
 
 function Hero() {
   return (
-    <section className="hero-section" id="home">
-      <div className="hero-section__image" aria-hidden="true"></div>
-      <div className="container hero-section__content text-center">
-        <p className="hero-section__eyebrow">PET SPA &amp; BOARDING</p>
-        <h1>We make every stay<br />feel like home</h1>
-        <Button href="#contact">Book a stay</Button>
+    <section className="hero" id="home">
+      <div className="hero-bg" style={{ backgroundImage: `linear-gradient(rgb(25 25 25 / 28%), rgb(25 25 25 / 28%)), url(${heroImage})` }} aria-hidden="true"></div>
+      <div className="container hero-content text-center">
+        <p className="hero-eyebrow">PET SPA &amp; BOARDING</p>
+        <h1>We keep them happy</h1>
+        <a className="hero-btn" href="#contact" aria-label="Book now"><img src={bookingButton} alt="" /></a>
       </div>
-      <svg className="hero-wave" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,83 C200,8 375,148 650,116 C920,85 1100,27 1440,82 L1440,180 L0,180 Z" />
-      </svg>
+      <img className="hero-wave" src={waveImage} alt="" aria-hidden="true" />
     </section>
   )
 }

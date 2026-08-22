@@ -1,30 +1,73 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import { Quote } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
+import reviewImage from '../../assets/images/customer_reviews_03.jpg'
 
 const testimonials = [
-  { quote: 'The team noticed every little thing about Teddy—from his shy first hello to the game that made his tail go wild. We collected a very happy dog.', name: 'Maya Brooks', pet: 'Teddy’s person', image: 'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=200&q=80' },
-  { quote: 'The photo updates made our trip so much easier. Luna was clearly relaxed, cared for, and enjoying her quiet sunny perch.', name: 'Ari Patel', pet: 'Luna’s person', image: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=200&q=80' },
+  {
+    title: 'Your pet massages were mesmerising',
+    quote: 'Just wanted to let you know how blessed i have been to have you guys care for me over the past few years.',
+    name: 'JACK RUSSELL',
+    pet: 'Dog',
+    image: reviewImage,
+  },
+  {
+    title: 'Every update made us smile',
+    quote: 'Our companion came home calm, happy, and full of stories from a wonderful stay.',
+    name: 'MAYA BROOKS',
+    pet: 'Dog owner',
+    image: reviewImage,
+  },
 ]
 
-const ratings = [['Staff', 96], ['Facility', 92], ['Food', 94], ['Accessories', 88]]
+const ratings = [
+  { label: 'STAFF', color: 'peach' },
+  { label: 'FACILITY', color: 'mint' },
+  { label: 'FOOD', color: 'yellow' },
+  { label: 'ACCESSORIES', color: 'aqua' },
+]
 
 function Testimonials() {
   return (
-    <section className="section testimonials-section">
+    <section className="section reviews" id="testimonials">
       <div className="container">
         <SectionHeading eyebrow="TESTIMONIALS" title="Our Furry Friends Say" />
-        <div className="row align-items-center testimonials-layout">
+        <div className="row align-items-center reviews-layout">
           <div className="col-12 col-md-6">
-            <Swiper className="testimonial-swiper" spaceBetween={24} slidesPerView={1} loop>
-              {testimonials.map((testimonial) => <SwiperSlide key={testimonial.name}>
-                <blockquote className="testimonial-card"><span className="testimonial-card__quote">“</span><p>{testimonial.quote}</p><footer><img loading="lazy" src={testimonial.image} alt="" /><div><strong>{testimonial.name}</strong><span>{testimonial.pet}</span></div></footer></blockquote>
-              </SwiperSlide>)}
+            <Swiper className="review-slider" spaceBetween={24} slidesPerView={1} loop>
+              {testimonials.map((t) => (
+                <SwiperSlide key={t.name}>
+                  <blockquote className="review-card">
+                    <div className="review-quote-wrapper">
+                      <Quote className="review-quote-icon" size={38} />
+                    </div>
+                    <h3 className="review-title">{t.title}</h3>
+                    <p className="review-text">{t.quote}</p>
+                    <footer>
+                      <img loading="lazy" src={t.image} alt={t.name} />
+                      <div>
+                        <strong>{t.name}</strong>
+                        <span>{t.pet}</span>
+                      </div>
+                    </footer>
+                  </blockquote>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
           <div className="col-12 col-md-6">
             <div className="ratings">
-              {ratings.map(([label, value]) => <div className="rating" key={label}><div className="rating__label"><span>{label}</span><span>{value}%</span></div><div className="rating__track"><span style={{ width: `${value}%` }}></span></div></div>)}
+              {ratings.map((item) => (
+                <div className={`rating rating--${item.color}`} key={item.label}>
+                  <div className="rating-label">
+                    <span>{item.label}</span>
+                  </div>
+                  <div className="rating-bar">
+                    <span></span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -34,3 +77,4 @@ function Testimonials() {
 }
 
 export default Testimonials
+

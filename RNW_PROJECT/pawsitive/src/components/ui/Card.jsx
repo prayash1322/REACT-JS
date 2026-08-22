@@ -1,5 +1,5 @@
-function Card({ children, className = '' }) {
-  return <article className={`card ${className}`}>{children}</article>
+function Card({ children, className = '', style }) {
+  return <article className={`card ${className}`} style={style}>{children}</article>
 }
 
 export default Card

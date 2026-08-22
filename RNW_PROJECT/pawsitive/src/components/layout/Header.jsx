@@ -1,46 +1,68 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Phone } from 'lucide-react'
+import logo from '../../assets/images/logo_blue.png'
 
-const navLinks = [
+const navItems = [
   ['Home', 'home'],
-  ['About', 'about'],
-  ['Boarding', 'boarding'],
-  ['Rates', 'pricing'],
-  ['Stories', 'journal'],
+  ['Pages', 'about'],
+  ['Blog', 'journal'],
+  ['Shop', 'pricing'],
+  ['Elements', 'packing'],
 ]
+
+const menus = {
+  Pages: ['About Us', 'Team', 'Our Process', 'Timeline', 'Services', 'Single Service', 'Prices', 'Contact', 'Coming Soon'],
+  Blog: ['Standard View', 'Columns View', 'Simple View', 'Grid View', 'Single Post', 'Gallery'],
+  Elements: ['Base', 'Headlines', 'Buttons & Icons', 'Images', 'Inner Row & Column', 'Countdown & Counter', 'Card', 'Progress & Advanced Bar', 'Price List & Single Product', 'Google & OpenStreet Maps', 'Service', 'Accordions & Tabs', 'Organic Animation', 'Team', 'Slider', 'Testimonials', 'Cost Calculator', 'Blog Layouts'],
+}
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeMenu, setActiveMenu] = useState('')
+  const [scrolled, setScrolled] = useState(false)
 
-  function scrollToSection(sectionId) {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+  useEffect(() => {
+    function onScroll() { setScrolled(window.scrollY > 60) }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  function scrollToSection(id) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     setMenuOpen(false)
   }
 
   return (
-    <header className="site-header">
-      <div className="container site-header__inner">
+    <header className={`navbar${scrolled ? ' scrolled' : ''}`}>
+      <div className="container navbar-inner">
         <button className="logo" type="button" onClick={() => scrollToSection('home')}>
-          <span className="logo__paw">●</span>
-          Pawsitive
+          <img src={logo} alt="Pawsitive" />
         </button>
-
-        <button
-          className="menu-toggle"
-          type="button"
-          aria-label="Toggle navigation"
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+        <button className="hamburger" type="button" aria-label="Toggle navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
           <span></span><span></span><span></span>
         </button>
-
-        <nav className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`} aria-label="Main navigation">
-          {navLinks.map(([label, sectionId]) => (
-            <button key={sectionId} type="button" onClick={() => scrollToSection(sectionId)}>
-              {label}
-            </button>
+        <nav className={`nav-menu${menuOpen ? ' nav-menu-open' : ''}`} aria-label="Main navigation">
+          {navItems.map(([label, sectionId]) => (
+            <div
+              className="nav-link-item"
+              key={label}
+              onMouseEnter={() => setActiveMenu(label)}
+              onMouseLeave={() => setActiveMenu('')}
+            >
+              <button type="button" onClick={() => scrollToSection(sectionId)}>{label}</button>
+              {menus[label] && activeMenu === label && (
+                <div className={`dropdown${label === 'Elements' ? ' dropdown-wide' : ''}`}>
+                  {menus[label].map((item) => (
+                    <a href={`#${sectionId}`} key={item} onClick={() => setActiveMenu('')}>{item}</a>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
-          <a className="site-header__phone" href="tel:+1234567890">+1 234 555 0187</a>
+          <a className="navbar-phone" href="tel:+1235455677">
+            <Phone size={16} aria-hidden="true" />
+            +1235 455 677
+          </a>
         </nav>
       </div>
     </header>

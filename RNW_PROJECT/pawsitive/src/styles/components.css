@@ -1,4 +1,123 @@
-.button { display: inline-flex; min-height: 43px; align-items: center; justify-content: center; padding: 0.65rem 1.35rem; border: 2px solid var(--line); border-radius: 999px; background: var(--aqua); box-shadow: 3px 3px 0 var(--line); color: var(--ink); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; transition: transform .2s, box-shadow .2s; }
-.button:hover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--line); }.button--outline { margin-top: 1.4rem; background: var(--yellow); }.button--text { min-height: 0; padding: .75rem 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; font-size: .75rem; }.button--text:hover { transform: none; box-shadow: none; color: var(--coral); }
-.section-heading { max-width: 600px; margin: 0 auto 2.5rem; }.section-heading--left { margin-inline: 0; }.section-heading__eyebrow, .hero-section__eyebrow { margin-bottom: .45rem; font-size: .68rem; font-weight: 700; letter-spacing: .12em; }.section-heading h2 { font-family: var(--font-script); font-size: clamp(2rem, 4vw, 3.3rem); font-weight: 400; line-height: 1.2; }.section-heading__text { margin-top: .75rem; color: var(--muted); font-size: .9rem; }
-.card { height: 100%; }.info-block { display: flex; gap: 1rem; align-items: flex-start; margin-top: 1.4rem; }.info-block__icon { display: grid; width: 32px; height: 32px; flex: 0 0 32px; place-items: center; border-radius: 50%; background: var(--peach-soft); color: var(--coral); font-size: 1rem; }.info-block h3, .pack-item h3 { font-size: .86rem; }.info-block p, .pack-item p { margin-top: .15rem; color: var(--muted); font-size: .78rem; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--peach-soft);
+  box-shadow: 3px 3px 0 var(--line);
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: transform 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--line);
+}
+.btn-outline {
+  background: var(--yellow);
+}
+.btn-text {
+  min-height: 0;
+  padding: 0.5rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+.btn-text:hover {
+  transform: none;
+  box-shadow: none;
+  color: var(--coral);
+}
+
+.heading {
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.heading-left {
+  margin-inline: 0;
+  text-align: left;
+}
+.heading-eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.heading h2 {
+  font-family: var(--font-script);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.heading-text {
+  margin-top: 0.85rem;
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card {
+  height: 100%;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+  cursor: default;
+}
+.feature-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--peach-soft);
+  color: var(--coral);
+  border: 2px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+.feature-icon-aqua {
+  background: var(--aqua);
+  color: #1a8a96;
+}
+.feature-item h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s;
+}
+.feature-item p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}
+.feature-item:hover h3 {
+  color: var(--aqua-strong);
+}
+.feature-item:hover .feature-icon {
+  background: transparent;
+  border-color: var(--coral);
+}
+.feature-item:hover .feature-icon-aqua {
+  border-color: #1a8a96;
+}

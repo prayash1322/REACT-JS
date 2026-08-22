@@ -1,7 +1,23 @@
+import { UtensilsCrossed, Gamepad2, Scissors } from 'lucide-react'
 import BoardingSection from './BoardingSection'
+import dogImage from '../../assets/images/hero_image_03.png'
 
 function DogKennels() {
-  return <BoardingSection tone="dog" reverse title="Dog Kennels" image="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=900&q=85" imageAlt="Dog resting on a sofa" text="For dogs who love a little more room to roam, our bright suites combine play, cosy rest, and lots of friendly company." activities={[{ icon: '◉', name: 'Eat' }, { icon: '◯', name: 'Play' }, { icon: '✦', name: 'Brush' }]} />
+  return (
+    <BoardingSection
+      tone="dog"
+      reverse
+      title="Dog Kennels"
+      image={dogImage}
+      imageAlt="Dog relaxing in a kennel"
+      text="Designed so animals can relax in a kind, pet style, run around our exercise yards, make new friends in doggy daycare, or simply spend some time grooming."
+      activities={[
+        { icon: <UtensilsCrossed size={25} />, name: 'Eat' },
+        { icon: <Gamepad2 size={25} />, name: 'Play' },
+        { icon: <Scissors size={25} />, name: 'Brush' },
+      ]}
+    />
+  )
 }
 
 export default DogKennels
