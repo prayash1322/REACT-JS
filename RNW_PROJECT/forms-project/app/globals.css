@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.app-dark, .app-dark *));
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../node_modules/flowbite-react";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
