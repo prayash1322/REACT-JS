@@ -97,7 +97,7 @@ const ResultGrid = () => {
   if (error) return <h1>Something went wrong...</h1>;
 
   return (
-    <div className="flex justify-center flex-wrap shrink-0 gap-6 w-full overflow-auto px-10 scrollbar-none">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 w-full px-4 sm:px-10">
       {loading
         ? Array(8).fill(0).map((_, idx) => <SkeletonCard key={idx} />)
         : results.map((item, idx) => <ResultCard key={idx} item={item} />)

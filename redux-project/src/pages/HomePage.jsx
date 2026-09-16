@@ -7,7 +7,7 @@ const HomePage = () => {
     const { query } = useSelector((store) => store.search)
     
   return (
-    <div>
+    <div className="px-4 sm:px-10 py-4">
       <SearchBar />
       
       {query != ''? <div>

@@ -8,7 +8,7 @@ const Tabs = () => {
   const activeTab = useSelector((state) => state.search.activeTab)
   const isDark = useSelector((state) => state.theme.isDark)
   return (
-    <div className="flex gap-5 px-10 py-5">
+    <div className="flex gap-3 px-4 sm:px-10 py-5 flex-wrap">
       {tabs.map((elem, idx) => (
         <button
           className={`${activeTab == elem ? 'bg-[#B5B9F0] text-gray-900' : isDark ? 'bg-gray-700 text-white' : 'bg-gray-300 text-gray-800'} transition-all px-5 py-2 uppercase rounded-3xl cursor-pointer active:scale-90`}

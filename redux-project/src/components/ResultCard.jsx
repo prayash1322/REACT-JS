@@ -10,7 +10,7 @@ const ResultCard = ({item}) => {
     dispatch(addedToast())
   }
   return (
-    <div className='w-[22vw] relative h-80 bg-amber-50 rounded-xl overflow-hidden'>
+    <div className='w-full relative h-72 sm:h-80 bg-amber-50 rounded-xl overflow-hidden'>
         <div className='h-full '>
             <a href={item.url} target="_blank">
                 {item.type == 'photo' ? <img loading='lazy' className='h-full w-full object-cover object-center' src={item.src} alt="" />:''}
