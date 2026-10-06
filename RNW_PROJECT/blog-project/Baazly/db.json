@@ -1,0 +1,215 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Prayash Jena",
+      "email": "prayash@baazly.com",
+      "password": "Prayash1234",
+      "role": "admin",
+      "phone": "+91 9999999999",
+      "address": {
+        "street": "124 Main Street",
+        "city": "Bhubaneswar",
+        "state": "Odisha",
+        "pincode": "751024"
+      }
+    },
+    {
+      "id": "u1791193837700",
+      "name": "PRAYASH",
+      "email": "prayash@gmail.com",
+      "password": "Prayash",
+      "role": "customer",
+      "phone": "",
+      "address": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "pincode": ""
+      },
+      "createdAt": "2026-10-05T09:50:37.700Z"
+    },
+    {
+      "id": "u1791261639482",
+      "name": "PRAYASH",
+      "email": "prayashjena4@gmail.com",
+      "password": "Prayash1322",
+      "role": "customer",
+      "phone": "",
+      "address": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "pincode": ""
+      },
+      "createdAt": "2026-10-06T04:40:39.482Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "name": "Samsung Galaxy M35 5G",
+      "category": "Electronics",
+      "brand": "Samsung",
+      "price": 19999,
+      "stock": 10,
+      "shortDesc": "Flagship-grade performance with a massive battery.",
+      "fullDesc": "A powerful mid-range smartphone with a 6.6-inch Super AMOLED display, 6000mAh battery, and 50MP camera. Built for everyday use with smooth performance and long-lasting charge.",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=900&q=80"
+      ]
+    },
+    {
+      "id": "p2",
+      "name": "Atomic Habits Paperback",
+      "category": "Books",
+      "brand": "Penguin Random House",
+      "price": 499,
+      "stock": 1,
+      "shortDesc": "Bestselling guide to building good habits and breaking bad ones.",
+      "fullDesc": "James Clear's practical framework for habit formation has sold over 15 million copies worldwide. A must-read for anyone looking to make lasting changes.",
+      "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80"
+      ]
+    },
+    {
+      "id": "p3",
+      "name": "Ergonomic Wooden Study Desk",
+      "category": "Furniture",
+      "brand": "UrbanWood",
+      "price": 8499,
+      "stock": 8,
+      "shortDesc": "Minimalist oak wood desk with built-in cable management.",
+      "fullDesc": "Crafted from premium solid wood, this minimalist study desk is designed to maximize work productivity while maintaining an elegant aesthetic for modern bedrooms or home offices.",
+      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=900&q=80"
+      ]
+    },
+    {
+      "id": "p4",
+      "name": "Glow Radiance Vitamin C Face Serum",
+      "category": "Beauty",
+      "brand": "DermaGlow",
+      "price": 799,
+      "stock": 24,
+      "shortDesc": "Brightening antioxidant serum for luminous and hydrated skin.",
+      "fullDesc": "Formulated with 15% active Vitamin C and Hyaluronic Acid, this daily antioxidant serum fights dark spots, evens out hyperpigmentation, and delivers radiant hydration all day.",
+      "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80"
+      ]
+    },
+    {
+      "id": "p5",
+      "name": "Pure Cotton Embroidered Ethnic Kurta",
+      "category": "Fashion",
+      "brand": "VedicVibe",
+      "price": 1299,
+      "stock": 15,
+      "shortDesc": "Breathable hand-woven ethnic wear perfect for festive celebrations.",
+      "fullDesc": "A tailored ethnic masterpiece crafted with 100% combed cotton, intricate hand-embroidery along the collar, and functional side pockets for style and everyday festive comfort.",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80",
+      "gallery": [
+        "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Electronics",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "2",
+      "name": "Furniture",
+      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "3",
+      "name": "Beauty",
+      "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "4",
+      "name": "Fashion",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "id": "5",
+      "name": "Books",
+      "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=300&q=80"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-256636",
+      "userId": "u1",
+      "products": [
+        {
+          "productId": "p1",
+          "name": "Samsung Galaxy M35 5G",
+          "price": 19999,
+          "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80",
+          "qty": 2
+        }
+      ],
+      "quantities": 2,
+      "total": 39998,
+      "paymentMethod": "Cash on Delivery",
+      "paymentStatus": "Pending on Delivery",
+      "customerInfo": {
+        "name": "Prayash Jena",
+        "email": "prayash@baazly.com",
+        "phone": "+91 9999999999"
+      },
+      "address": {
+        "street": "123 Main Street",
+        "city": "Bhubaneswar",
+        "state": "Odisha",
+        "pincode": "751024"
+      },
+      "notes": "",
+      "date": "6 Oct 2026, 10:34 pm",
+      "status": "confirmed"
+    },
+    {
+      "id": "ORD-169658",
+      "userId": "u1",
+      "products": [
+        {
+          "productId": "p4",
+          "name": "Glow Radiance Vitamin C Face Serum",
+          "price": 799,
+          "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80",
+          "qty": 1
+        }
+      ],
+      "quantities": 1,
+      "total": 799,
+      "paymentMethod": "UPI",
+      "paymentStatus": "Paid",
+      "customerInfo": {
+        "name": "Prayash Jena",
+        "email": "prayash@baazly.com",
+        "phone": "+91 9999999999"
+      },
+      "address": {
+        "street": "123 Main Street",
+        "city": "Bhubaneswar",
+        "state": "Odisha",
+        "pincode": "751024"
+      },
+      "notes": "",
+      "date": "6 Oct 2026, 10:38 pm",
+      "status": "confirmed",
+      "upiId": "prayash1305@oksbi",
+      "utr": "328901456789"
+    }
+  ],
+  "reviews": []
+}
