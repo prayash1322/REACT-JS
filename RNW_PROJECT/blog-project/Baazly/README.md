@@ -1,27 +1,85 @@
 # Baazly
 
-A modern, responsive e-commerce application built with **React.js**, **Vite**, **React Router**, and **JSON Server**. Features product browsing, category filtering, search, dynamic product management, persistent cart & wishlist, user authentication, protected routes, and order checkout with WhatsApp integration.
+A modern, responsive e-commerce application built with **React 18**, **Vite**, **React Router v6**, **Context API**, and **JSON Server**.
 
 ## Features
 
-- **Home Page**: Hero banner, promotional grids, service highlights, category cards, and featured/new arrival products
-- **Shop & Search**: Filter by category, filter by in-stock / out-of-stock, sort by price / name, real-time live search
-- **Product Details**: Product image gallery with automatic cycling slideshow, detailed specifications, stock validation, and quantity selection
-- **Cart Management**: Real-time cart synchronization, quantity adjustments with stock limits, and order subtotal calculations
-- **Wishlist**: Toggle products to and from wishlist with toast notifications
-- **Authentication**: User sign in, user registration, authenticated session persistence, and protected routes
-- **Customer Profile & Orders**: Account management, delivery profile updates, and order history tracking
-- **Checkout & Direct Ordering**: Pre-filled customer and delivery information with instant order generation and WhatsApp order forwarding
-- **Product Administration**: Modal-based editing and direct deletion of products with JSON Server REST API synchronization
+- **Home Page** — Hero banner, promo grids, service strip, category cards, featured & new arrival products
+- **Shop & Search** — Category filter, in-stock / out-of-stock filter, sort by price / name, real-time live search
+- **Product Details** — Image gallery with auto-cycling slideshow, specifications, stock validation, quantity selector
+- **Cart** — Real-time sync via Context API, quantity adjustments with stock limits, subtotal calculations
+- **Wishlist** — Toggle products with toast notifications, persisted via Context API
+- **Authentication** — Sign in, registration, session persistence with localStorage, protected routes
+- **Profile & Orders** — Account management, delivery address updates, full order history
+- **Checkout** — Pre-filled customer info, Cash on Delivery & UPI payment, WhatsApp order forwarding
+- **Admin** — Add products, modal-based editing, direct deletion — all synced with JSON Server REST API
 
 ## Tech Stack
 
-- **React 18**
-- **Vite**
-- **React Router v6**
-- **Axios**
-- **JSON Server** (REST API mock backend)
-- **Vanilla CSS** (Custom responsive design system)
+| Layer | Technology |
+|---|---|
+| UI | React 18 + Vite |
+| Routing | React Router v6 |
+| State Management | Context API + Custom Hooks |
+| HTTP Client | Axios |
+| Backend / DB | JSON Server |
+| Styling | Vanilla CSS (custom responsive design system) |
+
+## Project Structure
+
+```
+src/
+├── api/            # Axios API modules (auth, products, categories, orders)
+├── components/     # Reusable UI components (Navbar, ProductCard, CartItem …)
+├── context/        # Global state — AuthContext, CartContext, WishlistContext, ToastContext
+├── hooks/          # Custom hooks — useAuth, useCart, useWishlist, useToast
+├── layouts/        # MainLayout (Navbar + Footer wrapper)
+├── pages/          # Route-level pages (Home, Shop, Cart, Checkout, Profile …)
+├── routes/         # AppRoutes + ProtectedRoute
+└── utils/          # Helpers — formatters, imageUtils, localStorage storage
+db.json             # JSON Server mock database (users, products, categories, orders)
+```
+
+## Context API Architecture
+
+All global state is managed through React Context + custom hooks — no Redux, no external state library.
+
+```
+AuthContext    → current user session, login / logout / register
+CartContext    → cart items, add / remove / update quantity, totals
+WishlistContext → wishlist items, toggle in/out
+ToastContext   → global toast notification queue
+```
+
+Each context is consumed via a dedicated custom hook:
+
+```js
+const { user, login, logout } = useAuth();
+const { cartItems, addToCart, removeFromCart } = useCart();
+const { wishlist, toggleWishlist } = useWishlist();
+const { showToast } = useToast();
+```
+
+## JSON Server — Mock REST API
+
+`db.json` is the single source of truth for the backend. JSON Server exposes full REST endpoints automatically:
+
+| Resource | Endpoint | Description |
+|---|---|---|
+| Users | `GET/POST /users` | Auth & profile data |
+| Products | `GET/POST/PUT/DELETE /products` | Full product CRUD |
+| Categories | `GET /categories` | Category list |
+| Orders | `GET/POST /orders` | Order history |
+
+All API calls are centralised in `src/api/`:
+
+```js
+// productApi.js
+export const getProducts = () => api.get('/products');
+export const addProduct  = (data) => api.post('/products', data);
+export const updateProduct = (id, data) => api.put(`/products/${id}`, data);
+export const deleteProduct = (id) => api.delete(`/products/${id}`);
+```
 
 ## How To Run
 
@@ -30,17 +88,25 @@ A modern, responsive e-commerce application built with **React.js**, **Vite**, *
    npm install
    ```
 
-2. Start the mock REST API backend:
+2. Start JSON Server (mock REST API on port 3001):
    ```bash
    npm run server
    ```
 
-3. Start the Vite React development server:
+3. Start Vite dev server (port 5173):
    ```bash
    npm run dev
    ```
 
-## 📸 Screenshots
+> Both servers must be running simultaneously.
+
+## Explanation Video
+
+A short walkthrough covering the live app demo, Context API architecture, `db.json` structure, and how JSON Server powers the REST API — all in under 2 minutes.
+
+> 📹 [Watch the explanation video](https://drive.google.com/file/d/1-ZWrANjmhG4xtcgrreAhrAv8phDe_YLm/view?usp=sharing)
+
+## Screenshots
 
 ![Home Screen](./public/images/output/home.png)
 ![Home Screen](./public/images/output/home-2.png)
@@ -54,7 +120,7 @@ A modern, responsive e-commerce application built with **React.js**, **Vite**, *
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Prayash Jena**
 - GitHub: [@prayash1322](https://github.com/prayash1322)

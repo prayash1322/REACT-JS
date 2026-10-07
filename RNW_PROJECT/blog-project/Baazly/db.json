@@ -30,19 +30,19 @@
       "createdAt": "2026-10-05T09:50:37.700Z"
     },
     {
-      "id": "u1791261639482",
+      "id": "u1791356592142",
       "name": "PRAYASH",
       "email": "prayashjena4@gmail.com",
-      "password": "Prayash1322",
+      "password": "Prayash123",
       "role": "customer",
-      "phone": "",
+      "phone": "7849089393",
       "address": {
-        "street": "",
-        "city": "",
-        "state": "",
-        "pincode": ""
+        "street": "103 jaydarshan apartment",
+        "city": "surat",
+        "state": "Gujarat",
+        "pincode": "395005"
       },
-      "createdAt": "2026-10-06T04:40:39.482Z"
+      "createdAt": "2026-10-07T07:03:12.142Z"
     }
   ],
   "products": [
@@ -67,7 +67,7 @@
       "category": "Books",
       "brand": "Penguin Random House",
       "price": 499,
-      "stock": 1,
+      "stock": 0,
       "shortDesc": "Bestselling guide to building good habits and breaking bad ones.",
       "fullDesc": "James Clear's practical framework for habit formation has sold over 15 million copies worldwide. A must-read for anyone looking to make lasting changes.",
       "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=80",
@@ -209,6 +209,39 @@
       "status": "confirmed",
       "upiId": "prayash1305@oksbi",
       "utr": "328901456789"
+    },
+    {
+      "id": "ORD-183129",
+      "userId": "u1791356592142",
+      "products": [
+        {
+          "productId": "p2",
+          "name": "Atomic Habits Paperback",
+          "price": 499,
+          "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=80",
+          "qty": 1
+        }
+      ],
+      "quantities": 1,
+      "total": 499,
+      "paymentMethod": "UPI",
+      "paymentStatus": "Paid",
+      "customerInfo": {
+        "name": "PRAYASH",
+        "email": "prayashjena4@gmail.com",
+        "phone": "7849089393"
+      },
+      "address": {
+        "street": "103 jaydarshan apartment",
+        "city": "surat",
+        "state": "Gujarat",
+        "pincode": "395005"
+      },
+      "notes": "",
+      "date": "7 Oct 2026, 12:34 pm",
+      "status": "confirmed",
+      "upiId": "prayash1305@oksbi",
+      "utr": "UPI-TXN-590110"
     }
   ],
   "reviews": []
