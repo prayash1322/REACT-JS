@@ -1,0 +1,14 @@
+.favorites-page-container {
+  padding-top: 105px !important;
+  min-height: 100vh;
+}
+
+.favorites-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.favorites-subtitle {
+  font-size: 0.95rem;
+}

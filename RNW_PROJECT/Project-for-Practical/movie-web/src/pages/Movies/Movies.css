@@ -1,0 +1,67 @@
+.movies-catalog-page {
+  padding-top: 105px !important;
+  min-height: 100vh;
+}
+
+.catalog-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+}
+
+.catalog-subtitle {
+  font-size: 0.95rem;
+  max-width: 650px;
+}
+
+.catalog-genre-rail-container {
+  background: rgba(14, 17, 23, 0.7);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.15rem;
+}
+
+.catalog-filter-bar {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.catalog-filter-bar .cine-select {
+  padding-left: 0.65rem !important;
+  padding-right: 2rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  background-color: var(--bg-secondary) !important;
+}
+
+.active-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(229, 9, 20, 0.14);
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs, 2px);
+}
+
+.active-filter-chip button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.active-filter-chip button:hover {
+  color: #FFFFFF;
+}

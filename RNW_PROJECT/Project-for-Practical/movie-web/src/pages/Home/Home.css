@@ -1,0 +1,131 @@
+.home-page-container {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+}
+
+@media (min-width: 576px) {
+  .genre-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .genre-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.15rem;
+  }
+}
+
+.genre-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.1rem 1.25rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.genre-card:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.genre-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.genre-card-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.genre-card-icon {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.genre-card:hover .genre-card-icon {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.personalization-card {
+  background: linear-gradient(135deg, #10141d 0%, #151922 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.personalization-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .personalization-title {
+    font-size: 2.2rem;
+  }
+}
+
+.personalization-desc {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 540px;
+}
+
+.feature-mini-item {
+  background: rgba(7, 9, 13, 0.6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.feature-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.final-cta-box {
+  background: radial-gradient(circle at center, rgba(229, 9, 20, 0.12) 0%, rgba(14, 17, 23, 0.8) 70%);
+  border: 1px solid rgba(229, 9, 20, 0.25);
+  border-radius: var(--radius-lg);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.final-cta-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .final-cta-title {
+    font-size: 2.3rem;
+  }
+}
+
+.final-cta-text {
+  max-width: 520px;
+  font-size: 0.95rem;
+}

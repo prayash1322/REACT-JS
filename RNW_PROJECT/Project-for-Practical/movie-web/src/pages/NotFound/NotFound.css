@@ -1,0 +1,39 @@
+.notfound-page-container {
+  min-height: 80vh;
+  padding-top: 100px;
+}
+
+.notfound-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  max-width: 540px;
+  width: 100%;
+}
+
+.notfound-icon {
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+.notfound-code {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1;
+  display: block;
+  letter-spacing: -0.04em;
+  opacity: 0.9;
+}
+
+.notfound-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.notfound-desc {
+  max-width: 400px;
+  font-size: 0.95rem;
+}

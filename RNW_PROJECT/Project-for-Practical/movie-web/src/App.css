@@ -1,0 +1,6 @@
+.cine-main-content {
+  flex: 1 0 auto;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+}

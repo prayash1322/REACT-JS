@@ -1,0 +1,15 @@
+.dev-notice-banner {
+  background: rgba(30, 24, 15, 0.95);
+  border-bottom: 1px solid rgba(255, 193, 7, 0.3);
+  color: #ffda6a;
+  font-size: 0.85rem;
+  position: relative;
+  z-index: 1040;
+}
+
+.dev-notice-banner code {
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}

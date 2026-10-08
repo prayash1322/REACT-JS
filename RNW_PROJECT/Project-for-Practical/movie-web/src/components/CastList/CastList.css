@@ -1,0 +1,8 @@
+.cast-card-item {
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.cast-card-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover) !important;
+}

@@ -1,0 +1,14 @@
+.watchlist-page-container {
+  padding-top: 105px !important;
+  min-height: 100vh;
+}
+
+.watchlist-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.watchlist-subtitle {
+  font-size: 0.95rem;
+}

@@ -1,0 +1,112 @@
+.search-page-container {
+  padding-top: 105px !important;
+  min-height: 100vh;
+}
+
+.search-hero {
+  max-width: 720px;
+}
+
+.search-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.search-subtitle {
+  font-size: 0.95rem;
+}
+
+.search-input-box {
+  position: relative;
+  max-width: 680px;
+  width: 100%;
+}
+
+.search-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 1.25rem;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.search-text-field {
+  width: 100%;
+  padding: 0.95rem 3.25rem 0.95rem 3.5rem !important;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: #FFFFFF;
+  background-color: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.search-text-field:focus {
+  border-color: var(--accent);
+  background-color: #171c26;
+  box-shadow: 0 0 0 3px var(--accent-glow), 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.search-text-field::placeholder {
+  color: var(--text-muted);
+}
+
+.search-clear-btn {
+  position: absolute;
+  top: 50%;
+  right: 1.15rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: color var(--transition-fast);
+}
+
+.search-clear-btn:hover {
+  color: #FFFFFF;
+}
+
+.search-tags-row {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.search-tag-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.search-tag-chip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border-color: var(--border-hover);
+}
+
+.search-tag-chip.active {
+  background: var(--accent);
+  color: #FFFFFF;
+  border-color: var(--accent);
+}
+
+.search-explore-section {
+  padding-top: 1rem;
+}
